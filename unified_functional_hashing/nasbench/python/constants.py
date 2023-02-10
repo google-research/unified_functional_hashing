@@ -28,7 +28,7 @@ ALLOWED_OPS = [CONV3X3, CONV1X1, MAXPOOL3X3]
 ALLOWED_EDGES = [0, 1]   # Binary adjacency matrix
 
 NASBENCH_CONFIG = {
-    "nasbench_available_ops": [
+    "available_ops": [
         "conv3x3-bn-relu", "conv1x1-bn-relu", "maxpool3x3"
     ],
     "nasbench_batch_size": 256,

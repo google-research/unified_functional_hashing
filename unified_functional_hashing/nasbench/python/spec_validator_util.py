@@ -66,7 +66,7 @@ def _check_spec(model_spec):
   if model_spec.ops[-1] != "output":
     raise OutOfDomainError("last operation should be \"output\"")
   for op in model_spec.ops[1:-1]:
-    if op not in constants.NASBENCH_CONFIG["nasbench_available_ops"]:
+    if op not in constants.NASBENCH_CONFIG["available_ops"]:
       raise OutOfDomainError(
           "unsupported op %s (available ops = %s)"
-          % (op, constants.NASBENCH_CONFIG["nasbench_available_ops"]))
+          % (op, constants.NASBENCH_CONFIG["available_ops"]))

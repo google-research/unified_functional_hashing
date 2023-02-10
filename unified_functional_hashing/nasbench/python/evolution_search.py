@@ -158,7 +158,7 @@ class EvolutionSearcher():
       self.statistics["training_times"].append(eval_outputs[3])
       self.statistics["graph_hashes"].append(
           spec.hash_spec(
-              canonical_ops=self.nasbench.config["nasbench_available_ops"]))
+              canonical_ops=self.nasbench.config["available_ops"]))
 
     self.population.append((eval_outputs[1], spec))
 
@@ -290,7 +290,7 @@ class EvolutionSearcher():
       self.statistics["training_times"].append(eval_outputs[3])
       self.statistics["graph_hashes"].append(
           child_spec.hash_spec(
-              canonical_ops=self.nasbench.config["nasbench_available_ops"]))
+              canonical_ops=self.nasbench.config["available_ops"]))
 
     self.update_population(
         new_spec=child_spec,

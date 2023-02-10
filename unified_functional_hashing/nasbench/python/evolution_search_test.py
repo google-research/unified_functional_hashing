@@ -198,7 +198,7 @@ class RandomSearchTest(absltest.TestCase):
 
     expected_random_spec = expected_random_spec_generator.random_spec()
     graph_hash = expected_random_spec.hash_spec(
-        canonical_ops=self._nasbench.config["nasbench_available_ops"])
+        canonical_ops=self._nasbench.config["available_ops"])
     test_util.update_expected_iterators(
         expected_evaluator_rng,
         expected_statistics["times"],
@@ -288,7 +288,7 @@ class RandomSearchTest(absltest.TestCase):
 
     expected_random_spec = expected_random_spec_generator.random_spec()
     graph_hash = expected_random_spec.hash_spec(
-        canonical_ops=self._nasbench.config["nasbench_available_ops"])
+        canonical_ops=self._nasbench.config["available_ops"])
     test_util.update_expected_iterators(
         expected_evaluator_rng,
         expected_statistics["times"],
@@ -385,7 +385,7 @@ class RandomSearchTest(absltest.TestCase):
            len(expected_population) < population_size):
       expected_random_spec = expected_random_spec_generator.random_spec()
       graph_hash = expected_random_spec.hash_spec(
-          canonical_ops=self._nasbench.config["nasbench_available_ops"])
+          canonical_ops=self._nasbench.config["available_ops"])
       test_util.update_expected_iterators(
           expected_evaluator_rng,
           expected_statistics["times"],
@@ -843,7 +843,7 @@ class RandomSearchTest(absltest.TestCase):
         rng_seed=expected_mutator_rng_seed)
     expected_child_spec = mutator.mutate_spec(old_spec=expected_best_spec)
     graph_hash = expected_child_spec.hash_spec(
-        canonical_ops=self._nasbench.config["nasbench_available_ops"])
+        canonical_ops=self._nasbench.config["available_ops"])
     run_idx = evaluator_rng.integers(low=0, high=3, size=1)[0]
     stats = computed_stats.COMPUTED_STATS[graph_hash][108][run_idx]
     eval_outputs = (stats["final_validation_accuracy"],
@@ -943,7 +943,7 @@ class RandomSearchTest(absltest.TestCase):
         rng_seed=expected_mutator_rng_seed)
     expected_child_spec = mutator.mutate_spec(old_spec=expected_best_spec)
     graph_hash = expected_child_spec.hash_spec(
-        canonical_ops=self._nasbench.config["nasbench_available_ops"])
+        canonical_ops=self._nasbench.config["available_ops"])
     run_idx = evaluator_rng.integers(low=0, high=3, size=1)[0]
     stats = computed_stats.COMPUTED_STATS[graph_hash][108][run_idx]
     eval_outputs = (stats["final_validation_accuracy"],
@@ -1038,7 +1038,7 @@ class RandomSearchTest(absltest.TestCase):
         rng_seed=expected_mutator_rng_seed)
     expected_child_spec = mutator.mutate_spec(old_spec=expected_best_spec)
     graph_hash = expected_child_spec.hash_spec(
-        canonical_ops=self._nasbench.config["nasbench_available_ops"])
+        canonical_ops=self._nasbench.config["available_ops"])
     run_idx = evaluator_fec_rng.integers(low=0, high=3, size=1)[0]
     stats = computed_stats.COMPUTED_STATS[graph_hash][108][run_idx]
     eval_outputs = (stats["final_validation_accuracy"],
@@ -1148,7 +1148,7 @@ class RandomSearchTest(absltest.TestCase):
         rng_seed=expected_mutator_rng_seed)
     expected_child_spec = mutator.mutate_spec(old_spec=expected_best_spec)
     graph_hash = expected_child_spec.hash_spec(
-        canonical_ops=self._nasbench.config["nasbench_available_ops"])
+        canonical_ops=self._nasbench.config["available_ops"])
     run_idx = evaluator_fec_rng.integers(low=0, high=3, size=1)[0]
     stats = computed_stats.COMPUTED_STATS[graph_hash][108][run_idx]
     eval_outputs = (stats["final_validation_accuracy"],

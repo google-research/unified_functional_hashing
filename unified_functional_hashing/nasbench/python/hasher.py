@@ -99,7 +99,7 @@ class Hasher():
     if self.nasbench.is_valid(model_spec):
       if test and not hasattr(model_spec, "graph_hash"):
         model_spec.graph_hash = model_spec.hash_spec(
-            canonical_ops=self.nasbench.config["nasbench_available_ops"])
+            canonical_ops=self.nasbench.config["available_ops"])
       _, computed_stats = self.nasbench.get_metrics_from_spec(model_spec)
     epoch_stats = computed_stats[4][0]
     accuracies = [epoch_stats[accuracy] for accuracy in self.accuracy_list]

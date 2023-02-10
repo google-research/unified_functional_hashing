@@ -43,7 +43,7 @@ def evaluate(nasbench: api.NASBench,
   """
   if test and not hasattr(model_spec, "graph_hash"):
     model_spec.graph_hash = model_spec.hash_spec(
-        canonical_ops=nasbench.config["nasbench_available_ops"])
+        canonical_ops=nasbench.config["available_ops"])
   _, computed_stats = nasbench.get_metrics_from_spec(model_spec)
   valid_acc = computed_stats[108][run_idx]["final_validation_accuracy"]
   valid_acc += noise_generator.generate_noise()

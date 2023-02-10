@@ -29,6 +29,7 @@ setup(
         'absl-py',
         'numpy',
         'pytest',
+        'tensorflow>=2.0.0',
         'nasbench @ git+https://github.com/google-research/nasbench@master',
     ],
     python_requires='>=3.6',

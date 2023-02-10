@@ -70,7 +70,7 @@ class Mutator():
       for ind in range(1, constants.NUM_VERTICES - 1):
         if self.rng.random(size=1)[0] < op_mutation_prob:
           available = [
-              o for o in self.nasbench.config["nasbench_available_ops"]
+              o for o in self.nasbench.config["available_ops"]
               if o != new_ops[ind]
           ]
           new_ops[ind] = self.rng.choice(available)

@@ -127,7 +127,7 @@ class RandomSearcher():
       self.statistics["training_times"].append(eval_outputs[3])
       self.statistics["graph_hashes"].append(
           spec.hash_spec(
-              canonical_ops=self.nasbench.config["nasbench_available_ops"]))
+              canonical_ops=self.nasbench.config["available_ops"]))
 
   def run_search(self) -> None:
     """Runs a single roll-out of random search to a fixed time budget.
