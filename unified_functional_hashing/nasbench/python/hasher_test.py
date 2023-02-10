@@ -51,7 +51,7 @@ class HasherTest(absltest.TestCase):
         hashed_stats[4][0]["halfway_train_accuracy"],
         hashed_stats[4][0]["final_validation_accuracy"],
         hashed_stats[4][0]["halfway_validation_accuracy"]
-    ], mantissa_bits)
+    ])
     self.assertEqual(model_hash, expected_hash)
 
   def test_correct_hashing_time(self):
@@ -65,7 +65,7 @@ class HasherTest(absltest.TestCase):
     hasher = hasher_lib.Hasher(
         self._nasbench, mantissa_bits=24, hashing_time=10.0)
     model_hash, _ = hasher.get_unified_functional_hash(self._model_spec)
-    self.assertEqual(model_hash, 6559424274240569344)
+    self.assertEqual(model_hash, 5379572464749505659)
 
   def test_same_hash_from_same_spec(self):
     hasher = hasher_lib.Hasher(

@@ -21,8 +21,7 @@ from unified_functional_hashing.nasbench.python import run_worker_util
 from nasbench import api
 
 
-# All these flags are expected by the launcher. To launch on Borg, you must
-# have them even if you don't use them.
+# All these flags are expected by the launcher.
 _EXPERIMENT_ID = flags.DEFINE_string(
     "experiment_id", "",
     "The ID of the experiment to run. Required.")

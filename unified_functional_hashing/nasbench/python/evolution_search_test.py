@@ -1053,7 +1053,7 @@ class RandomSearchTest(absltest.TestCase):
         "num_cache_partial_hits": [0, 0],
         "num_cache_full_hits": [0, 0],
         "cache_size": [0, 1],
-        "model_hashes": ["", "3380622801569494190"]
+        "model_hashes": ["", "6805141191373897492"],
     }
 
     expected_valid_fitnesses = [indv[0] for indv in population[1:]
@@ -1162,7 +1162,7 @@ class RandomSearchTest(absltest.TestCase):
         "num_cache_partial_hits": [0, 0],
         "num_cache_full_hits": [0, 0],
         "cache_size": [0, 1],
-        "model_hashes": ["", "6128025405464510464"]
+        "model_hashes": ["", "3334487466548246282"],
     }
 
     expected_population = population[:population_size // 2] + [
@@ -1356,11 +1356,15 @@ class RandomSearchTest(absltest.TestCase):
     expected_num_cache_full_hits = [0, 0, 0, 0, 0, 0, 0, 0]
     expected_cache_size = [0, 1, 2, 3, 4, 5, 6, 7]
     expected_model_hashes = [
-        "", "2262111178723579678", "7468420669527941144", "1077607769737661496",
-        "2075770728117857483", "8491132477128048640", "6510126918004834216",
-        "5520427465221668864"
+        "",
+        "600283551129299771",
+        "686185084185832266",
+        "7897728192795779931",
+        "3821652079166797202",
+        "9053577747494872029",
+        "959907280425634929",
+        "168755755783002772",
     ]
-
     # From second pass of cache hits.
     expected_times.extend([
         20512.776567202778, 20522.776567202778, 20532.776567202778,
@@ -1385,9 +1389,14 @@ class RandomSearchTest(absltest.TestCase):
     expected_num_cache_full_hits.extend([1, 2, 3, 4, 5, 6, 7, 8])
     expected_cache_size.extend([7, 7, 7, 7, 7, 7, 7, 7])
     expected_model_hashes.extend([
-        "2262111178723579678", "7468420669527941144", "1077607769737661496",
-        "2075770728117857483", "8491132477128048640", "6510126918004834216",
-        "5520427465221668864", "8491132477128048640"
+        "600283551129299771",
+        "686185084185832266",
+        "7897728192795779931",
+        "3821652079166797202",
+        "9053577747494872029",
+        "959907280425634929",
+        "168755755783002772",
+        "9053577747494872029",
     ])
 
     # From second pass, a cache miss after the series of cache hits.
@@ -1399,7 +1408,7 @@ class RandomSearchTest(absltest.TestCase):
     expected_num_cache_partial_hits.extend([0])
     expected_num_cache_full_hits.extend([8])
     expected_cache_size.extend([8])
-    expected_model_hashes.extend(["784260650204103151"])
+    expected_model_hashes.extend(["1013426310944285191"])
 
     # NOTE: These are different than the non-FEC version of this test above
     # because the FEC's RNG is out of sync from the Evaluator's RNG due to
@@ -1592,11 +1601,15 @@ class RandomSearchTest(absltest.TestCase):
     expected_num_cache_full_hits = [0, 0, 0, 0, 0, 0, 0, 0]
     expected_cache_size = [0, 1, 2, 3, 4, 5, 6, 7]
     expected_model_hashes = [
-        "", "2262111178723579678", "7468420669527941144", "1077607769737661496",
-        "2075770728117857483", "8491132477128048640", "6510126918004834216",
-        "5520427465221668864"
+        "",
+        "600283551129299771",
+        "686185084185832266",
+        "7897728192795779931",
+        "3821652079166797202",
+        "9053577747494872029",
+        "959907280425634929",
+        "168755755783002772",
     ]
-
     # From second pass of cache hits.
     expected_times.extend([
         20187.402971399537, 20197.402971399537, 20207.402971399537,
@@ -1622,9 +1635,14 @@ class RandomSearchTest(absltest.TestCase):
     expected_num_cache_full_hits.extend([1, 2, 3, 4, 5, 6, 7, 8])
     expected_cache_size.extend([7, 7, 7, 7, 7, 7, 7, 7])
     expected_model_hashes.extend([
-        "2262111178723579678", "7468420669527941144", "1077607769737661496",
-        "2075770728117857483", "8491132477128048640", "6510126918004834216",
-        "5520427465221668864", "8491132477128048640"
+        "600283551129299771",
+        "686185084185832266",
+        "7897728192795779931",
+        "3821652079166797202",
+        "9053577747494872029",
+        "959907280425634929",
+        "168755755783002772",
+        "9053577747494872029",
     ])
 
     # From second pass, a cache miss after the series of cache hits.
@@ -1636,7 +1654,7 @@ class RandomSearchTest(absltest.TestCase):
     expected_num_cache_partial_hits.extend([0])
     expected_num_cache_full_hits.extend([8])
     expected_cache_size.extend([8])
-    expected_model_hashes.extend(["784260650204103151"])
+    expected_model_hashes.extend(["1013426310944285191"])
 
     expected_statistics = {
         "times": expected_times,

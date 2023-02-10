@@ -208,7 +208,7 @@ class RandomSearchTest(absltest.TestCase):
     expected_statistics["num_cache_partial_hits"].append(0)
     expected_statistics["num_cache_full_hits"].append(0)
     expected_statistics["cache_size"].append(1)
-    expected_statistics["model_hashes"].append("2262111178723579678")
+    expected_statistics["model_hashes"].append("600283551129299771")
 
     # Iteration 1, cache miss.
     test_util.update_expected_iterators(
@@ -227,7 +227,7 @@ class RandomSearchTest(absltest.TestCase):
     expected_statistics["num_cache_partial_hits"].append(0)
     expected_statistics["num_cache_full_hits"].append(0)
     expected_statistics["cache_size"].append(2)
-    expected_statistics["model_hashes"].append("7468420669527941144")
+    expected_statistics["model_hashes"].append("686185084185832266")
 
     # Second pass.
     expected_fec_rng2 = np.random.default_rng(expected_fec_rng_seed)
@@ -248,7 +248,7 @@ class RandomSearchTest(absltest.TestCase):
     expected_statistics["num_cache_partial_hits"].append(0)
     expected_statistics["num_cache_full_hits"].append(1)
     expected_statistics["cache_size"].append(2)
-    expected_statistics["model_hashes"].append("2262111178723579678")
+    expected_statistics["model_hashes"].append("600283551129299771")
 
     self.assertDictEqual(statistics, expected_statistics)
 
@@ -494,7 +494,7 @@ class RandomSearchTest(absltest.TestCase):
     expected_statistics["num_cache_partial_hits"].append(0)
     expected_statistics["num_cache_full_hits"].append(0)
     expected_statistics["cache_size"].append(1)
-    expected_statistics["model_hashes"].append("2262111178723579678")
+    expected_statistics["model_hashes"].append("600283551129299771")
 
     # Iteration 1, cache miss.
     test_util.update_expected_iterators(
@@ -513,7 +513,7 @@ class RandomSearchTest(absltest.TestCase):
     expected_statistics["num_cache_partial_hits"].append(0)
     expected_statistics["num_cache_full_hits"].append(0)
     expected_statistics["cache_size"].append(2)
-    expected_statistics["model_hashes"].append("7468420669527941144")
+    expected_statistics["model_hashes"].append("686185084185832266")
 
     # Iteration 2, cache miss.
     test_util.update_expected_iterators(
@@ -532,7 +532,7 @@ class RandomSearchTest(absltest.TestCase):
     expected_statistics["num_cache_partial_hits"].append(0)
     expected_statistics["num_cache_full_hits"].append(0)
     expected_statistics["cache_size"].append(3)
-    expected_statistics["model_hashes"].append("1077607769737661496")
+    expected_statistics["model_hashes"].append("7897728192795779931")
 
     # Iteration 3, cache miss.
     test_util.update_expected_iterators(
@@ -551,7 +551,7 @@ class RandomSearchTest(absltest.TestCase):
     expected_statistics["num_cache_partial_hits"].append(0)
     expected_statistics["num_cache_full_hits"].append(0)
     expected_statistics["cache_size"].append(4)
-    expected_statistics["model_hashes"].append("2075770728117857483")
+    expected_statistics["model_hashes"].append("3821652079166797202")
 
     # Iteration 4, cache miss.
     test_util.update_expected_iterators(
@@ -570,7 +570,7 @@ class RandomSearchTest(absltest.TestCase):
     expected_statistics["num_cache_partial_hits"].append(0)
     expected_statistics["num_cache_full_hits"].append(0)
     expected_statistics["cache_size"].append(5)
-    expected_statistics["model_hashes"].append("8491132477128048640")
+    expected_statistics["model_hashes"].append("9053577747494872029")
 
     # Iteration 5, cache miss.
     test_util.update_expected_iterators(
@@ -589,7 +589,7 @@ class RandomSearchTest(absltest.TestCase):
     expected_statistics["num_cache_partial_hits"].append(0)
     expected_statistics["num_cache_full_hits"].append(0)
     expected_statistics["cache_size"].append(6)
-    expected_statistics["model_hashes"].append("1140311289072390563")
+    expected_statistics["model_hashes"].append("8755780474599762952")
 
     # Iteration 6, cache miss.
     test_util.update_expected_iterators(
@@ -608,7 +608,7 @@ class RandomSearchTest(absltest.TestCase):
     expected_statistics["num_cache_partial_hits"].append(0)
     expected_statistics["num_cache_full_hits"].append(0)
     expected_statistics["cache_size"].append(7)
-    expected_statistics["model_hashes"].append("6727226846357969280")
+    expected_statistics["model_hashes"].append("6142971847922918116")
 
     # Second pass.
     expected_fec_rng2 = np.random.default_rng(expected_fec_rng_seed)
@@ -629,7 +629,7 @@ class RandomSearchTest(absltest.TestCase):
     expected_statistics["num_cache_partial_hits"].append(0)
     expected_statistics["num_cache_full_hits"].append(1)
     expected_statistics["cache_size"].append(7)
-    expected_statistics["model_hashes"].append("2262111178723579678")
+    expected_statistics["model_hashes"].append("600283551129299771")
 
     # Iteration 1, cache hit.
     test_util.update_expected_iterators(
@@ -648,7 +648,7 @@ class RandomSearchTest(absltest.TestCase):
     expected_statistics["num_cache_partial_hits"].append(0)
     expected_statistics["num_cache_full_hits"].append(2)
     expected_statistics["cache_size"].append(7)
-    expected_statistics["model_hashes"].append("7468420669527941144")
+    expected_statistics["model_hashes"].append("686185084185832266")
 
     # Iteration 2, cache hit.
     test_util.update_expected_iterators(
@@ -667,7 +667,7 @@ class RandomSearchTest(absltest.TestCase):
     expected_statistics["num_cache_partial_hits"].append(0)
     expected_statistics["num_cache_full_hits"].append(3)
     expected_statistics["cache_size"].append(7)
-    expected_statistics["model_hashes"].append("1077607769737661496")
+    expected_statistics["model_hashes"].append("7897728192795779931")
 
     # Iteration 3, cache hit.
     test_util.update_expected_iterators(
@@ -686,7 +686,7 @@ class RandomSearchTest(absltest.TestCase):
     expected_statistics["num_cache_partial_hits"].append(0)
     expected_statistics["num_cache_full_hits"].append(4)
     expected_statistics["cache_size"].append(7)
-    expected_statistics["model_hashes"].append("2075770728117857483")
+    expected_statistics["model_hashes"].append("3821652079166797202")
 
     self.assertDictEqual(statistics, expected_statistics)
 
