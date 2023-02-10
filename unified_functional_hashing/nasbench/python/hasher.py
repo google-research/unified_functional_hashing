@@ -15,7 +15,7 @@
 """UnifiedFunctionalHasher for NASBench."""
 import hashlib
 import struct
-from typing import Tuple
+from typing import List, Tuple
 
 from nasbench import api
 
@@ -51,7 +51,7 @@ class Hasher():
         "final_validation_accuracy", "halfway_validation_accuracy"
     ]
 
-  def significant_float_mix(self, accuracies: list[float]) -> int:
+  def significant_float_mix(self, accuracies: List[float]) -> int:
     """Mixes bits in a list of floats, rounded according to mantissa_bits.
 
     Args:
@@ -61,7 +61,7 @@ class Hasher():
     Returns:
       An integer produced by mixing the given list of floats.
     """
-    def hash_to_integer(value: tuple[int, int]) -> int:
+    def hash_to_integer(value: Tuple[int, int]) -> int:
       """Return a 64-bit integer representing the hash of the given value."""
       hasher = hashlib.sha256()
       hasher.update(bytes(str(value), "utf8"))

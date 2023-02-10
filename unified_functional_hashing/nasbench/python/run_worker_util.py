@@ -14,7 +14,7 @@
 
 """NASBench run_worker utilities."""
 
-from typing import Optional, Union
+from typing import Dict, List, Optional, Union
 
 from unified_functional_hashing.nasbench.python import constants
 from unified_functional_hashing.nasbench.python import evaluator as evaluator_lib
@@ -85,7 +85,7 @@ def build_searcher(
 
 
 def create_experiment_repeat_metadata_records(
-    repeat_idx: int, metadata_iterable_dict: dict[str, list[Union[float, int,
+    repeat_idx: int, metadata_iterable_dict: Dict[str, List[Union[float, int,
                                                                   str]]]
 ) -> experiment_data.ExperimentMetadataRepeat:
   """Creates `ExperimentMetadata` record.
