@@ -1,7 +1,7 @@
 # Unified Functional Hashing
 
 ## Overview
-This directory contains the publicly available [Colab Notebook](https://colab.research.google.com/github/google-research/google-research/blob/master/unified_functional_hashing/Unified_Functional_Hashing_In_NASBench101.ipynb) for the paper:
+This directory contains the publicly available [Colab Notebook](https://colab.research.google.com/github/google-research/unified_functional_hashing/blob/main/Unified_Functional_Hashing.ipynb) for the paper:
 
 [**Unified Functional Hashing**](
 TODO:{link to arxiv}).
@@ -27,7 +27,7 @@ If you find this code or paper useful, please cite:
 
 ```
 @article{uid,
-title = {Unified Functional Hashing for Automatic Machine Learning},
+title = {Unified Functional Hashing in Automatic Machine Learning},
 author = {Ryan Gillard and Stephen Jonany and Yingjie Miao and Michael Munn and Connal de Souza and Jonathan Dungay and Chen Liang and David R. So and Quoc V. Le and Esteban Real},
 journal = {-}
 }

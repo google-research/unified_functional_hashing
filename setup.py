@@ -23,12 +23,13 @@ setup(
     description='functional equivalence cache demonstration on NASBench101',
     author='Google LLC',
     author_email='noreply@google.com',
-    url='https://github.com/google-research/google-research/unified_functional_hashing',
+    url='https://github.com/google-research/unified_functional_hashing',
     packages=find_packages(),
     install_requires=[
         'absl-py',
         'numpy',
         'pytest',
+        'nasbench @ git+https://github.com/google-research/nasbench@master',
     ],
     python_requires='>=3.6',
 )
